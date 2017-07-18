@@ -1,17 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/background_light"
+    android:layout_centerHorizontal="true"
+    android:background="@color/background"
     tools:context="com.vulpineinteractive.mathhead.QuestionActivity">
 
-    <View
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/answerGroup">
+
+        <EditText
+            android:id="@+id/questionTextField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:ems="10"
+            android:inputType="number"
+            android:text="0"
+            android:textAlignment="center"/>
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/overlap_spacer"
+        android:layout_centerHorizontal="true"
+        android:text="Submit"/>
+
+    <Space
+        android:id="@+id/overlap_spacer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/answerGroup"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="-25dp"/>
+
+    <RadioGroup
+        android:id="@+id/answerGroup"
         android:layout_width="match_parent"
         android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
         android:background="@color/colorPrimaryDark"
-        android:layout_alignParentBottom="true">
-    </View>
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".125"/>
+
+        <RadioButton
+            android:id="@+id/answerA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".125"
+            android:buttonTint="@color/colorAccent"
+            android:checked="false"
+            android:gravity="center"
+            android:text="A"
+            android:textColor="@color/colorAccent"/>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".125"/>
+
+        <RadioButton
+            android:id="@+id/answerB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".125"
+            android:buttonTint="@color/colorAccent"
+            android:checked="false"
+            android:gravity="center"
+            android:text="B"
+            android:textColor="@color/colorAccent"/>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".125"/>
+
+        <RadioButton
+            android:id="@+id/answerC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".125"
+            android:buttonTint="@color/colorAccent"
+            android:checked="false"
+            android:gravity="center"
+            android:text="C"
+            android:textColor="@color/colorAccent"/>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".125"/>
+
+        <RadioButton
+            android:id="@+id/answerD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".125"
+            android:buttonTint="@color/colorAccent"
+            android:checked="false"
+            android:gravity="center"
+            android:text="D"
+            android:textColor="@color/colorAccent"/>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".125"/>
+
+
+    </RadioGroup>
+
+
 </RelativeLayout>
