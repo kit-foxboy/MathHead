@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainLayout"
     android:layout_width="match_parent"
@@ -13,7 +12,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/answerGroup">
+        android:layout_above="@+id/answerGroup"
+        android:background="@color/background">
 
         <EditText
             android:id="@+id/questionTextField"
@@ -24,7 +24,8 @@
             android:ems="10"
             android:inputType="number"
             android:text="0"
-            android:textAlignment="center"/>
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"/>
 
     </RelativeLayout>
 
@@ -35,7 +36,11 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/overlap_spacer"
         android:layout_centerHorizontal="true"
-        android:text="Submit"/>
+        android:background="@android:color/background_light"
+        android:padding="5dp"
+        android:text="Submit"
+        android:textColor="@color/background"
+        android:textSize="20dp"/>
 
     <Space
         android:id="@+id/overlap_spacer"
